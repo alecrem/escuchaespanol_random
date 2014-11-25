@@ -1,4 +1,4 @@
-int rango = 100;//Número de personas
+int rango = 99;//Número de personas
 
 int w = 1440;//Ancho de la pantalla
 int h = 900;//Alto de la pantalla
@@ -14,20 +14,23 @@ void draw() {
   background(#cc0000);//Fondo rojo
   int r;//El número que se mostrará
   if (resultado == 0) {
-    r = int(random(rango)) + 1;//Número al azar
+    r = numero();//Número al azar
   } else {
     r=resultado;//Parar y mostrar
   }
-  println(r);
   fill(#ffff00);//Números amarillos
   text(r, w/2 - 300/2, h/2 + 200/2);//Mostrando el número
 }
 
 void mouseClicked() {
   if (resultado == 0) {
-    resultado = int(random(rango)) + 1;//Decidir el número al azar
+    resultado = numero();//Decidir el número al azar
+    println("Resultado: " + resultado);
   } else {
     resultado = 0;//Volverán a salir números nuevos sin parar
   }
 }
 
+int numero(){
+  return int(random(rango)) + 1;
+}
