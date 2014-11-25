@@ -19,15 +19,15 @@ void draw() {
     r=resultado;//Parar y mostrar
   }
   println(r);
-  fill(#ffff00);
-  text(r, w/2 - 300/2, h/2 + 200/2);
+  fill(#ffff00);//Números amarillos
+  text(r, w/2 - 300/2, h/2 + 200/2);//Mostrando el número
 }
 
 void mouseClicked() {
   if (resultado == 0) {
-    resultado = int(random(rango)) + 1;//Número al azar
+    resultado = int(random(rango)) + 1;//Decidir el número al azar
   } else {
-    resultado = 0;
+    resultado = 0;//Volverán a salir números nuevos sin parar
   }
 }
 
