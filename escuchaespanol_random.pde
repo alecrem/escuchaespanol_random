@@ -22,13 +22,19 @@ void draw() {
   text(r, w/2 - 300/2, h/2 + 200/2);//Mostrando el número
 }
 
-void mouseClicked() {
+void step() {
   if (resultado == 0) {
     resultado = numero();//Decidir el número al azar
-    println("Resultado: " + resultado);
+    print(resultado + ", ");
   } else {
     resultado = 0;//Volverán a salir números nuevos sin parar
   }
+}
+void mouseClicked() {
+  step();
+}
+void keyPressed() {
+  step();
 }
 
 int numero(){
