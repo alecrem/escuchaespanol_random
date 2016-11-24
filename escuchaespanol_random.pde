@@ -1,11 +1,11 @@
 int rango = 99;//Número de personas
 
-int w = 1440;//Ancho de la pantalla
-int h = 900;//Alto de la pantalla
+int w = 1280;//Ancho de la pantalla 1440 1920
+int h = 720;//Alto de la pantalla 900 1080
 int resultado = 0;
 
 void setup() {
-  size(w, h);
+  size(1440, 900);
   PFont f = loadFont("SansSerif-250.vlw");
   textFont(f);
 }
